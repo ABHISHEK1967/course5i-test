@@ -1,0 +1,24 @@
+<div class=" card" style="margin-top: 5px; min-height: 538px;">
+  <div class="card-body">
+    <p-table [columns]="cols" [value]="rows" [rows]="25" [paginator]="true" [responsive]="true"
+      styleClass="p-datatable-responsive-demo">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of cols" [ngStyle]="{'width': col.width}">{{col.header}}</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-val let-col>
+        <tr>
+          <td *ngFor="let col of cols">
+            <span class="p-column-title">{{col.header}}</span>
+            <span *ngIf="col.field=='list_price'" style="overflow-wrap: break-word">{{val[col.field]| currency}}</span>
+            <span *ngIf="col.field=='harmony_cost'" style="overflow-wrap: break-word">{{val[col.field]|currency}}</span>
+            <span *ngIf="col.field=='net_price'" style="overflow-wrap: break-word">{{val[col.field]|currency}}</span>
+            <span *ngIf="col.field!='list_price'&&col.field!='harmony_cost'&&col.field!='net_price'"
+              style="overflow-wrap: break-word">{{val[col.field]}}</span>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

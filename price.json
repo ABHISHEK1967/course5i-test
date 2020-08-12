@@ -1,0 +1,59 @@
+{
+  "price": [
+    {
+      "list_price": "249",
+      "dollars_off": 50,
+      "net_price": 199,
+      "off": "",
+      "harmony_cost": 157.95,
+      "cost_concession": "",
+      "special_cost": "",
+      "net_cost": "",
+      "comments": "FSR 3990"
+    },
+    {
+      "list_price": 64.99,
+      "dollars_off": 10,
+      "net_price": 54.99,
+      "off": "",
+      "harmony_cost": 20.39,
+      "cost_concession": "",
+      "special_cost": "",
+      "net_cost": "",
+      "comments": "Cost $21"
+    },
+    {
+      "list_price": 21.99,
+      "dollars_off": 5,
+      "net_price": 16.99,
+      "off": "",
+      "harmony_cost": 7.14,
+      "cost_concession": "",
+      "special_cost": "",
+      "net_cost": "",
+      "comments": " "
+    },
+    {
+      "list_price": 549,
+      "dollars_off": 137.25,
+      "net_price": 411.75,
+      "off": "",
+      "harmony_cost": 354.9,
+      "cost_concession": "",
+      "special_cost": "",
+      "net_cost": "",
+      "comments": "Overstock sell until EOL"
+    },
+    {
+      "list_price": 599,
+      "dollars_off": 149.75,
+      "net_price": 449.25,
+      "off": "",
+      "harmony_cost": 386.67,
+      "cost_concession": "",
+      "special_cost": "",
+      "net_cost": "",
+      "comments": "FSR 00199515"
+    }
+  ]
+}
