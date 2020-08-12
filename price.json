@@ -1,7 +1,7 @@
 {
   "price": [
     {
-      "list_price": "249",
+      "list_price": 249,
       "dollars_off": 50,
       "net_price": 199,
       "off": "",

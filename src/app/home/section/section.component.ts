@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../../global.service';
-
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-section',
@@ -25,10 +25,21 @@ export class SectionComponent implements OnInit {
       { field: "comments", header: "Comments/Notes", width: '20%' }
     ]
 
-    this._globalService.getData()
-      .subscribe((data) => {
-        this.rows = data;
+    this._globalService.getData().pipe(
+      map((data: any) => {
+        data.forEach((x) => {
+          x['off'] = x['off'] == '' ? x['off'] = '-' : x['off'];
+          x['cost_concession'] = x['cost_concession'] == '' ? x['cost_concession'] = '-' : x['cost_concession'];
+          x['special_cost'] = x['special_cost'] == '' ? x['special_cost'] = '-' : x['special_cost'];
+          x['net_cost'] = x['net_cost'] == '' ? x['net_cost'] = '-' : x['net_cost'];
+        })
+
+        return data;
       })
+    ).subscribe((data) => {
+      console.log(data);
+      this.rows = data;
+    })
   }
 
 
