@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  db_URL: 'https://node-abhi.herokuapp.com/price'
 };

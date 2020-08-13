@@ -28,10 +28,10 @@ export class SectionComponent implements OnInit {
     this._globalService.getData().pipe(
       map((data: any) => {
         data.forEach((x) => {
-          x['off'] = x['off'] == '' ? x['off'] = '-' : x['off'];
-          x['cost_concession'] = x['cost_concession'] == '' ? x['cost_concession'] = '-' : x['cost_concession'];
-          x['special_cost'] = x['special_cost'] == '' ? x['special_cost'] = '-' : x['special_cost'];
-          x['net_cost'] = x['net_cost'] == '' ? x['net_cost'] = '-' : x['net_cost'];
+          x['off'] = x['off'] == null ? x['off'] = '-' : x['off'];
+          x['cost_concession'] = x['cost_concession'] == null ? x['cost_concession'] = '-' : x['cost_concession'];
+          x['special_cost'] = x['special_cost'] == null ? x['special_cost'] = '-' : x['special_cost'];
+          x['net_cost'] = x['net_cost'] == null ? x['net_cost'] = '-' : x['net_cost'];
         })
 
         return data;
