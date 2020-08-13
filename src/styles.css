@@ -4,3 +4,12 @@
 body {
   background-color: whitesmoke;
 }
+
+.ui-progress-spinner {
+  z-index: 9999999 !important;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

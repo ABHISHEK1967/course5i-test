@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './home/header/header.component';
 import { SectionComponent } from './home/section/section.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './home/footer/footer.component'
+import { FooterComponent } from './home/footer/footer.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { BlockUIModule } from 'primeng/blockui';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FooterComponent } from './home/footer/footer.component'
   imports: [
     BrowserModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    BlockUIModule,
+    ProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

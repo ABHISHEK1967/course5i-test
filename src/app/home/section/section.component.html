@@ -1,7 +1,9 @@
 <div class=" card" style="margin-top: 5px; min-height: 538px;">
+
   <div class="card-body">
+
     <p-table [columns]="cols" [value]="rows" [rows]="25" [paginator]="true" [responsive]="true"
-      styleClass="p-datatable-responsive-demo">
+      styleClass="p-datatable-responsive-demo" [loading]="loading">
       <ng-template pTemplate="header" let-columns>
         <tr>
           <th *ngFor="let col of cols" [ngStyle]="{'width': col.width}">{{col.header}}</th>

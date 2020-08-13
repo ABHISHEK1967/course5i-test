@@ -9,8 +9,13 @@ import { map } from 'rxjs/operators';
 })
 export class SectionComponent implements OnInit {
   cols: any;
-  rows: any
-  constructor(private _globalService: GlobalService) { }
+  rows: any;
+  loading: boolean = true;
+  constructor(private _globalService: GlobalService) {
+    this._globalService.isLoading.subscribe((loading) => {
+      this.loading = loading;
+    })
+  }
 
   ngOnInit(): void {
     this.cols = [
@@ -24,7 +29,7 @@ export class SectionComponent implements OnInit {
       { field: "net_cost", header: "Net Cost", width: '12%' },
       { field: "comments", header: "Comments/Notes", width: '20%' }
     ]
-
+    this._globalService.start();
     this._globalService.getData().pipe(
       map((data: any) => {
         data.forEach((x) => {
@@ -37,8 +42,9 @@ export class SectionComponent implements OnInit {
         return data;
       })
     ).subscribe((data) => {
-      console.log(data);
+      //console.log(data);
       this.rows = data;
+      this._globalService.stop();
     })
   }
 
