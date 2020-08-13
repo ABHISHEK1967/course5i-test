@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  db_URL: 'http://localhost:3000/price'
+  db_URL: 'https://node-abhi.herokuapp.com/price'
 };
 
 /*
